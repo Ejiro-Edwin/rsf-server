@@ -4,8 +4,6 @@ const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
 require("dotenv").config();
 
-const PORT = process.env.PORT || 8000;
-
 // instantiate an express app
 const app = express();
 // cors
@@ -60,6 +58,6 @@ app.get("/", (req, res) => {
 
 /*************************************************/
 // Express server listening...
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 });
