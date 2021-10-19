@@ -54,8 +54,8 @@ app.post("/send", (req, res) => {
   });
 });
 
-app.route("/").get(function (req, res) {
-  res.status(200).send({ status: 200, message: "RSF SERVER" });
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
 /*************************************************/
