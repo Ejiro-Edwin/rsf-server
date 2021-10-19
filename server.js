@@ -54,6 +54,10 @@ app.post("/send", (req, res) => {
   });
 });
 
+app.route("/").get(function (req, res) {
+  resstatus(200).send({ status: 200, message: "RSF SERVER" });
+});
+
 /*************************************************/
 // Express server listening...
 app.listen(PORT, () => {
